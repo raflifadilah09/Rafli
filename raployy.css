@@ -1,0 +1,6 @@
+nav a:hover,
+nav a:active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid blue;
+}

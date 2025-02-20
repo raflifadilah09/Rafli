@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../belajar algoritma"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "belajar algoritma"
+	}
+}
