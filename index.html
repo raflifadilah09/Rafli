@@ -9,11 +9,38 @@
     <link rel="stylesheet" href="raployyy.html">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
+    <style>
+        .burger {
+            display: block; /* Change this line to always display the burger menu */
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <a href="#" class="logo"></a>
-        <nav>
+
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id="navMenu">
             <a href="#" class="active">Home</a>
             <a href="raployyy.html" >About</a>
             <a href="raployy.html" >Skills</a>
@@ -38,6 +65,17 @@
                    
            </div>
         </div>
-   
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var navMenu = document.getElementById("navMenu");
+            if (navMenu.style.display === "block") {
+                navMenu.style.display = "none";
+            } else {
+                navMenu.style.display = "block";
+            }
+        }
+    </script>
 </body> 
 </html>
