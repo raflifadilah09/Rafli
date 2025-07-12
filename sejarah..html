@@ -1,95 +1,307 @@
+<!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Infografis Revolusi Industri
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
- </head>
- <body class="bg-blue-100 font-roboto">
-  <header class="bg-blue-600 text-white p-4">
-   <h1 class="text-3xl font-bold text-center">
-    Infografis Revolusi Industri
-   </h1>
+  <title>Infografis Revolusi Industri</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -40px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #3b82f6;
+      border: 4px solid #bfdbfe;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 font-poppins">
+  <header class="gradient-bg text-white py-8 shadow-xl">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">Infografis Revolusi Industri</h1>
+      <p class="text-xl text-blue-100 max-w-3xl mx-auto">Perjalanan transformasi industri dari masa ke masa</p>
+    </div>
   </header>
-  <main class="p-4">
-   <section class="bg-blue p-6 rounded-lg shadow-lg mb-6">
-    <h2 class="text-2xl font-bold mb-4">
-     Sejarah Singkat Revolusi Industri
-    </h2>
-    <p class="mb-4">
-     Revolusi Industri adalah periode antara abad ke-18 dan ke-19 di mana terjadi perubahan besar dalam bidang pertanian, manufaktur, pertambangan, transportasi, dan teknologi. Perubahan ini berdampak besar pada kondisi sosial, ekonomi, dan budaya di seluruh dunia.
-    </p>
-    <img alt="Ilustrasi pabrik dengan mesin uap pada masa Revolusi Industri pertama" class="w-full h-auto rounded-lg" height="400" src="img/sejarah 1.jpg" width="600"/>
-   </section>
-   <section class="blue p-6 rounded-lg shadow-lg mb-6">
-    <h2 class="text-2xl font-bold mb-4">
-     Revolusi Industri 1.0
-    </h2>
-    <p class="mb-4">
-     Revolusi Industri pertama dimulai pada akhir abad ke-18 dengan penemuan mesin uap oleh James Watt. Mesin uap ini memungkinkan produksi massal dan efisiensi yang lebih tinggi dalam berbagai industri seperti tekstil dan pertambangan.
-    </p>
-    <img alt="Gambar mesin uap yang digunakan pada Revolusi Industri 1.0" class="w-full h-auto rounded-lg" height="400" src="img/sejah 1.0.png" width="600"/>
-   </section>
-   <section class="bg-blue p-6 rounded-lg shadow-lg mb-6">
-    <h2 class="text-2xl font-bold mb-4">
-     Revolusi Industri 2.0
-    </h2>
-    <p class="mb-4">
-     Revolusi Industri kedua terjadi pada akhir abad ke-19 dan awal abad ke-20 dengan penemuan listrik dan jalur perakitan. Ini memungkinkan produksi massal yang lebih cepat dan efisien, serta pengembangan industri otomotif dan elektronik.
-    </p>
-    <img alt="Gambar jalur perakitan di pabrik pada Revolusi Industri 2.0" class="w-full h-auto rounded-lg" height="400" src="img/3 sejarah.png" width="600"/>
-   </section>
-   <section class="bg-blue p-6 rounded-lg shadow-lg mb-6">
-    <h2 class="text-2xl font-bold mb-4">
-     Revolusi Industri 3.0
-    </h2>
-    <p class="mb-4">
-     Revolusi Industri ketiga dimulai pada pertengahan abad ke-20 dengan munculnya komputer dan teknologi informasi. Ini memungkinkan otomatisasi proses produksi dan pengembangan teknologi komunikasi yang lebih canggih.
-    </p>
-    <img alt="Gambar komputer pertama yang digunakan pada Revolusi Industri 3.0" class="w-full h-auto rounded-lg" height="400" src="img/3.0.png" width="600"/>
-   </section>
-   <section class="bg-blue p-6 rounded-lg shadow-lg mb-6">
-    <h2 class="text-2xl font-bold mb-4">
-     Revolusi Industri 4.0
-    </h2>
-    <p class="mb-4">
-     Revolusi Industri keempat adalah era digital yang kita alami saat ini. Ini ditandai dengan penggunaan teknologi canggih seperti Internet of Things (IoT), kecerdasan buatan (AI), dan big data untuk meningkatkan efisiensi dan inovasi dalam berbagai sektor industri.
-    </p>
-    <img alt="Gambar ilustrasi teknologi IoT dan AI pada Revolusi Industri 4.0" class="w-full h-auto rounded-lg" height="400" src="img/4.0.jpg" width="600"/>
-   </section>
-   <section class="bg-blue p-6 rounded-lg shadow-lg">
-    <h2 class="text-2xl font-bold mb-4">
-     Sumber Informasi dan Bahan Bacaan
-    </h2>
-    <ul class="list-disc list-inside">
-     <li>
-      <a class="text-blue-600 hover:underline" href="https://www.history.com/topics/industrial-revolution">
-       History.com - Industrial Revolution
-      </a>
-     </li>
-     <li>
-      <a class="text-blue-600 hover:underline" href="https://en.wikipedia.org/wiki/Industrial_Revolution">
-       Wikipedia - Industrial Revolution
-      </a>
-     </li>
-     <li>
-      <a class="text-blue-600 hover:underline" href="https://www.britannica.com/event/Industrial-Revolution">
-       Britannica - Industrial Revolution
-      </a>
-     </li>
-    </ul>
-   </section>
+
+  <main class="container mx-auto px-4 py-8">
+    <section class="mb-16">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover animate-fadeIn" style="animation-delay: 0.2s;">
+        <div class="md:flex">
+          <div class="md:w-1/2 p-8">
+            <h2 class="text-3xl font-bold mb-4 text-blue-800">Sejarah Singkat Revolusi Industri</h2>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Revolusi Industri adalah periode antara abad ke-18 dan ke-19 di mana terjadi perubahan besar dalam bidang pertanian, manufaktur, pertambangan, transportasi, dan teknologi. Perubahan ini berdampak besar pada kondisi sosial, ekonomi, dan budaya di seluruh dunia.
+            </p>
+            <div class="flex space-x-4">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">1750-1850</span>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Transformasi Global</span>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <img alt="Ilustrasi pabrik dengan mesin uap pada masa Revolusi Industri pertama" 
+                 class="w-full h-full object-cover" 
+                 src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16 relative">
+      <div class="absolute left-8 top-0 bottom-0 w-1 bg-blue-200 hidden md:block"></div>
+      
+      <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Evolusi Revolusi Industri</h2>
+      
+      <div class="relative pl-12 md:pl-20 mb-12 timeline-item animate-fadeIn" style="animation-delay: 0.3s;">
+        <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="text-xl font-bold">1.0</span>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-800">Revolusi Industri 1.0</h3>
+          </div>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            Revolusi Industri pertama dimulai pada akhir abad ke-18 dengan penemuan mesin uap oleh James Watt. Mesin uap ini memungkinkan produksi massal dan efisiensi yang lebih tinggi dalam berbagai industri seperti tekstil dan pertambangan.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mt-6">
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                <i class="fas fa-lightbulb mr-2 text-yellow-500"></i> Inovasi Utama
+              </h4>
+              <p class="text-gray-700 text-sm">Mesin uap, tenaga air, mekanisasi produksi</p>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i> Periode
+              </h4>
+              <p class="text-gray-700 text-sm">1760-1840</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative pl-12 md:pl-20 mb-12 timeline-item animate-fadeIn" style="animation-delay: 0.4s;">
+        <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="text-xl font-bold">2.0</span>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-800">Revolusi Industri 2.0</h3>
+          </div>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            Revolusi Industri kedua terjadi pada akhir abad ke-19 dan awal abad ke-20 dengan penemuan listrik dan jalur perakitan. Ini memungkinkan produksi massal yang lebih cepat dan efisien, serta pengembangan industri otomotif dan elektronik.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mt-6">
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                <i class="fas fa-lightbulb mr-2 text-yellow-500"></i> Inovasi Utama
+              </h4>
+              <p class="text-gray-700 text-sm">Listrik, jalur perakitan, produksi massal</p>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i> Periode
+              </h4>
+              <p class="text-gray-700 text-sm">1870-1914</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative pl-12 md:pl-20 mb-12 timeline-item animate-fadeIn" style="animation-delay: 0.5s;">
+        <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="text-xl font-bold">3.0</span>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-800">Revolusi Industri 3.0</h3>
+          </div>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            Revolusi Industri ketiga dimulai pada pertengahan abad ke-20 dengan munculnya komputer dan teknologi informasi. Ini memungkinkan otomatisasi proses produksi dan pengembangan teknologi komunikasi yang lebih canggih.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mt-6">
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                <i class="fas fa-lightbulb mr-2 text-yellow-500"></i> Inovasi Utama
+              </h4>
+              <p class="text-gray-700 text-sm">Komputer, otomatisasi, elektronik</p>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i> Periode
+              </h4>
+              <p class="text-gray-700 text-sm">1960-2000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative pl-12 md:pl-20 timeline-item animate-fadeIn" style="animation-delay: 0.6s;">
+        <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="text-xl font-bold">4.0</span>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-800">Revolusi Industri 4.0</h3>
+          </div>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            Revolusi Industri keempat adalah era digital yang kita alami saat ini. Ini ditandai dengan penggunaan teknologi canggih seperti Internet of Things (IoT), kecerdasan buatan (AI), dan big data untuk meningkatkan efisiensi dan inovasi dalam berbagai sektor industri.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 mt-6">
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                <i class="fas fa-lightbulb mr-2 text-yellow-500"></i> Inovasi Utama
+              </h4>
+              <p class="text-gray-700 text-sm">IoT, AI, Big Data, Robotika</p>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                <i class="fas fa-calendar-alt mr-2 text-blue-500"></i> Periode
+              </h4>
+              <p class="text-gray-700 text-sm">2010-Sekarang</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16 animate-fadeIn" style="animation-delay: 0.7s;">
+      <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-8 shadow-lg">
+        <h2 class="text-3xl font-bold mb-6">Dampak Revolusi Industri</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm">
+            <div class="text-4xl mb-4 text-blue-200">
+              <i class="fas fa-industry"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Ekonomi</h3>
+            <p class="text-blue-100">Peningkatan produktivitas dan pertumbuhan ekonomi yang pesat</p>
+          </div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm">
+            <div class="text-4xl mb-4 text-blue-200">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Sosial</h3>
+            <p class="text-blue-100">Perubahan struktur masyarakat dan munculnya kelas pekerja</p>
+          </div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm">
+            <div class="text-4xl mb-4 text-blue-200">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Lingkungan</h3>
+            <p class="text-blue-100">Dampak ekologis dan tantangan keberlanjutan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="animate-fadeIn" style="animation-delay: 0.8s;">
+      <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+        <h2 class="text-3xl font-bold mb-6 text-blue-800">Sumber Informasi dan Bahan Bacaan</h2>
+        <div class="space-y-4">
+          <a href="https://www.history.com/topics/industrial-revolution" class="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+            <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
+              <i class="fas fa-book"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-blue-800">History.com - Industrial Revolution</h3>
+              <p class="text-sm text-gray-600">Sumber komprehensif tentang sejarah Revolusi Industri</p>
+            </div>
+            <div class="ml-auto text-blue-600">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Industrial_Revolution" class="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+            <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-blue-800">Wikipedia - Industrial Revolution</h3>
+              <p class="text-sm text-gray-600">Artikel lengkap tentang Revolusi Industri</p>
+            </div>
+            <div class="ml-auto text-blue-600">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </a>
+          <a href="https://www.britannica.com/event/Industrial-Revolution" class="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+            <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
+              <i class="fas fa-university"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-blue-800">Britannica - Industrial Revolution</h3>
+              <p class="text-sm text-gray-600">Sumber akademis tentang Revolusi Industri</p>
+            </div>
+            <div class="ml-auto text-blue-600">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="bg-blue-600 text-white p-4 text-center">
-   <p>
-    © SMK WIKRAMA BOGOR 2024
-    rafli fadllah
-   </p>
+
+  <footer class="gradient-bg text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="#" class="text-white hover:text-blue-200 transition-colors">
+          <i class="fab fa-facebook-f text-xl"></i>
+        </a>
+        <a href="#" class="text-white hover:text-blue-200 transition-colors">
+          <i class="fab fa-twitter text-xl"></i>
+        </a>
+        <a href="#" class="text-white hover:text-blue-200 transition-colors">
+          <i class="fab fa-instagram text-xl"></i>
+        </a>
+        <a href="#" class="text-white hover:text-blue-200 transition-colors">
+          <i class="fab fa-linkedin-in text-xl"></i>
+        </a>
+      </div>
+      <p class="mb-2">© 2024 SMK WIKRAMA BOGOR</p>
+      <p class="text-blue-200">Dibuat dengan <i class="fas fa-heart text-red-300"></i> oleh Rafli Fadllah</p>
+    </div>
   </footer>
- </body>
+
+  <script>
+    // Animasi scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const animateElements = document.querySelectorAll('.animate-fadeIn');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      animateElements.forEach(el => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(20px)';
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
 </html>

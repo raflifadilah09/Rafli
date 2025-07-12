@@ -1,0 +1,21 @@
+
+        .burger {
+            display: block; /* Change this line to always display the burger menu */
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
+
+    
