@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rafli Fadillah | Portfolio</title>
     
     <!-- CSS Links -->
@@ -470,14 +470,15 @@
             nav {
                 position: fixed;
                 top: 0;
-                right: -100%;
-                width: 70%;
+                right: -80%;
+                width: 80%;
                 height: 100vh;
-                background: rgba(26, 26, 46, 0.9);
+                padding: 80px 30px;
+                background: rgba(26, 26, 46, 0.98);
                 backdrop-filter: blur(10px);
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
+                align-items: flex-start;
+                justify-content: flex-start;
                 transition: all 0.5s ease;
                 z-index: 100;
             }
@@ -488,7 +489,11 @@
             
             nav a {
                 margin: 15px 0;
-                font-size: 20px;
+                padding: 15px;
+                width: 100%;
+                font-size: 18px;
+                text-align: left;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
             }
             
             .burger.active div:nth-child(1) {
@@ -507,10 +512,11 @@
             .dropdown-content {
                 position: static;
                 display: none;
-                background: transparent;
-                box-shadow: none;
                 width: 100%;
-                text-align: center;
+                padding-left: 20px;
+                background: rgba(58, 134, 255, 0.1);
+                box-shadow: none;
+                text-align: left;
                 opacity: 1;
                 transform: none;
             }
@@ -530,6 +536,56 @@
             
             .dropdown.active .dropdown-btn::after {
                 transform: rotate(90deg);
+            }
+            
+            /* Mobile home section adjustments */
+            .home {
+                padding: 100px 5% 40px;
+            }
+            
+            .home-content h1 {
+                font-size: 36px;
+                margin-bottom: 15px;
+            }
+            
+            .home-content h3 {
+                font-size: 24px;
+            }
+            
+            .home-img {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .home-content p {
+                font-size: 14px;
+            }
+            
+            .social-icons a {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                width: 85%;
+                right: -85%;
+                padding: 80px 20px;
+            }
+            
+            .home-content h1 {
+                font-size: 32px;
+            }
+            
+            .home-content h3 {
+                font-size: 20px;
+            }
+            
+            .home-img {
+                width: 200px;
+                height: 200px;
             }
         }
         
@@ -625,6 +681,13 @@
         burger.addEventListener('click', function() {
             burger.classList.toggle('active');
             navMenu.classList.toggle('active');
+            
+            // Toggle body scroll when menu is open
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         });
 
         // Close menu when clicking on a link
@@ -632,6 +695,7 @@
             link.addEventListener('click', function() {
                 burger.classList.remove('active');
                 navMenu.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
 
@@ -650,7 +714,7 @@
         // Create floating particles
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
-            const particleCount = 30;
+            const particleCount = window.innerWidth < 768 ? 20 : 30;
             
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
@@ -726,6 +790,14 @@
         
         // Start typewriter effect
         setTimeout(typeWriter, 1000);
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            // Recreate particles on resize for better mobile experience
+            const particlesContainer = document.getElementById('particles');
+            particlesContainer.innerHTML = '';
+            createParticles();
+        });
     </script>
 </body>
 </html>
